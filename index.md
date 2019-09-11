@@ -4,7 +4,7 @@
 
 ### Professional Examples
 
-[Daily Sales Report](/aaronphaneuf/daily_sales_report/blob/master/README.md)
+[Daily Sales Report](https://github.com/aaronphaneuf/daily_sales_report/blob/master/README.md)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
