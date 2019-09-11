@@ -9,7 +9,10 @@ An older version of this repository pulled from a table named v_TJTrans, which l
 
 # daily_sales.sql
 
-<code>SELECT * from v_SummaryData</code>
+```javascript
+SELECT * from v_SummaryData
+}
+```
 <p>results in over 20 million rows and 26 columns - over 520 million cells of data dating back to 2013.
 Net sales are based off Gross sales - Cash Negatives - Taxes. These are obtained through the following filters:</p>
 
