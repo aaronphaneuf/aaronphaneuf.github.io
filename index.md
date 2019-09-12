@@ -1,5 +1,7 @@
 ## Portfolio
 
+I have been working with data science for 3+ years at my current role of Pricing Manager. 
+My primary tool for extraction is a SQL connection using Python, and manipulating the data using a number of libraries such as pandas, matplotlib, and numpy, to name a few.
 ---
 
 ### Professional Examples
