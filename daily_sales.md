@@ -4,7 +4,7 @@ Pulls from a SQL table named v_SummaryData for each store in the company and sum
 An older version of this repository pulled from a table named v_TJTrans, which lists every transaction and was more onerous than needed.
 
 <p align="center">
-<img src="images/daily_sales.PNG">
+<img src="/images/daily_sales.PNG">
 </p>
 
 # daily_sales.sql
