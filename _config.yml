@@ -1,11 +1,10 @@
-title: Aaron Phaneuf # your name (or website title) here
+title: <p> align="center">Aaron Phaneuf</p> # your name (or website title) here
 logo: "/images/aphaneuf.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  <p align="center">Pricing Manager for Planet Organic Market
+  <p align="center">Pricing Manager for Planet Organic Market</p>
   <br><br>
   Specializing in data science through Python
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a></p>
+  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a>
   
-theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
