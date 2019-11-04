@@ -4,7 +4,6 @@ description: > # your text below (remove <br> elements if you don't need line br
   <p align="center">Pricing Manager for Planet Organic Market</p>
   <br><br>
   Specializing in data science through Python
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a>
+  
   
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
