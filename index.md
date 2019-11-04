@@ -7,7 +7,7 @@ My primary tool for extraction is a SQL connection using Python, and manipulatin
 ### Professional Examples
 
 [Daily Sales Report](/daily_sales.md)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/dailysales_piechart.png?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
