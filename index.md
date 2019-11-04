@@ -10,8 +10,8 @@ My primary tool for extraction is a SQL connection using Python, and manipulatin
 <img src="images/dailysales_piechart.png?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Aisle Map](/aile_map.md)
+<img src="images/tea_heatmap.png?raw=true"/>
 
 ---
 [Project 3 Title](/sample_page)
