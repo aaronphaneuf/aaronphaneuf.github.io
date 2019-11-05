@@ -11,7 +11,7 @@ My primary tool for extraction is a SQL connection using Python, and manipulatin
 
 ---
 [Aisle Map](/aile_map.md)
-<img src="images/tea_heatmap.PNG?raw=true"/>
+<img src="images/aisle_map_example.png?raw=true"/>
 
 ---
 [Project 3 Title](/sample_page)
