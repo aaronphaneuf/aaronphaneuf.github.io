@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://aaronphaneuf.github.io/sitemap.xml

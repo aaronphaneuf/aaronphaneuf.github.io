@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aaron&#39;s Blog</title>
+    <link>https://aaronphaneuf.github.io/</link>
+    <description>Recent content on Aaron&#39;s Blog</description>
+    <image>
+      <url>https://aaronphaneuf.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://aaronphaneuf.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 15 Jan 2023 09:56:00 +0000</lastBuildDate><atom:link href="https://aaronphaneuf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geomap Generator with Python</title>
+      <link>https://aaronphaneuf.github.io/posts/geomapgenerator/</link>
+      <pubDate>Sun, 15 Jan 2023 09:56:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/posts/geomapgenerator/</guid>
+      <description>Visualizing data</description>
+    </item>
+    
+    <item>
+      <title>Building a Web Scraper with Python</title>
+      <link>https://aaronphaneuf.github.io/posts/webscraper/</link>
+      <pubDate>Sun, 11 Dec 2022 09:56:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/posts/webscraper/</guid>
+      <description>Automating a repetitive task.</description>
+    </item>
+    
+    <item>
+      <title>My Homelab</title>
+      <link>https://aaronphaneuf.github.io/posts/myhomelab/</link>
+      <pubDate>Sun, 11 Dec 2022 09:56:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/posts/myhomelab/</guid>
+      <description>Self hosting everything</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://aaronphaneuf.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/page/about/</guid>
+      <description>A brief description</description>
+    </item>
+    
+    <item>
+      <title>My Projects</title>
+      <link>https://aaronphaneuf.github.io/page/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/page/projects/</guid>
+      <description>While most of my projects can be found on my Github, here is a complete list of the projects I have completed / am working on:
+Collection To Do Built with Django/Vue - A mobile app intended for use by myself and my wife. Showcasing the currently catchable achievements on Animal Crossing depending on the month of the year.
+Scrabble Stats Built with Django/Vue - A score keeping application built with Django and Vue.</description>
+    </item>
+    
+  </channel>
+</rss>

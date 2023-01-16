@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>python on Aaron&#39;s Blog</title>
+    <link>https://aaronphaneuf.github.io/tags/python/</link>
+    <description>Recent content in python on Aaron&#39;s Blog</description>
+    <image>
+      <url>https://aaronphaneuf.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://aaronphaneuf.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 15 Jan 2023 09:56:00 +0000</lastBuildDate><atom:link href="https://aaronphaneuf.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geomap Generator with Python</title>
+      <link>https://aaronphaneuf.github.io/posts/geomapgenerator/</link>
+      <pubDate>Sun, 15 Jan 2023 09:56:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/posts/geomapgenerator/</guid>
+      <description>Visualizing data</description>
+    </item>
+    
+    <item>
+      <title>Building a Web Scraper with Python</title>
+      <link>https://aaronphaneuf.github.io/posts/webscraper/</link>
+      <pubDate>Sun, 11 Dec 2022 09:56:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/posts/webscraper/</guid>
+      <description>Automating a repetitive task.</description>
+    </item>
+    
+  </channel>
+</rss>
