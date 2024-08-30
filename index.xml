@@ -9,7 +9,16 @@
       <link>https://aaronphaneuf.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 19 Aug 2024 09:56:00 +0000</lastBuildDate><atom:link href="https://aaronphaneuf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aaronphaneuf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrading MySQL 5 to 8</title>
+      <link>https://aaronphaneuf.github.io/posts/mysql5-8/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://aaronphaneuf.github.io/posts/mysql5-8/</guid>
+      <description>Tips for a giant leap</description>
+    </item>
+    
     <item>
       <title>Gitea</title>
       <link>https://aaronphaneuf.github.io/posts/gitea/</link>
