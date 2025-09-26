@@ -1,0 +1,506 @@
+/* ===== Base ===== */
+html { font-family: Arial, Helvetica; }
+html, body { background: var(--vp-c-bg); }
+
+/* ===== Theme vars ===== */
+:root{
+
+  --vp-c-text-1: #222;
+  --vp-c-text-2: #222;
+
+  --vp-c-bg: #f3f3ee;
+  --vp-c-brand-1: #4a7862; /* main */
+  --vp-c-brand-2: #4a7862; /* hover */
+  --vp-c-brand-3: #4a7862; /* active */
+  --color-page-bg: var(--vp-c-bg);
+  --color-text:    var(--vp-c-text-1);
+
+  --s--2: 0.9rem;
+
+  /* side “mask” gutters used by the centered footer */
+  --page-margin: 2rem;
+  --page-width-mid: 52rem;
+
+  /* footer internals (desktop/tablet) */
+  --footer-border-w: 2px;
+  --footer-shadow-h: 4rem;   /* height of the upward fade on desktop */
+
+  /* space so content doesn’t sit under the sticky footer */
+  --footer-safe: calc(
+    0.9rem + var(--footer-border-w) + 8px + env(safe-area-inset-bottom, 0px)
+  );
+}
+
+/* ===== Illustration (bottom-left) ===== */
+.footer-illo{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: clamp(140px, 16vw, 260px);
+  height: auto;
+  opacity: .95;
+  pointer-events: none;
+  z-index: 1002; /* above fade + rule */
+}
+
+/* ===== Desktop/Tablet: sticky footer ===== */
+.footer-spacer{ height: var(--footer-safe); }
+
+.footer{
+  position: sticky;
+  bottom: 0;
+  padding: var(--s--2);
+  text-align: center;
+  font-size: var(--s--2);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 65rem;                 /* widen if you like */
+  background: var(--color-page-bg);
+  border-top: var(--footer-border-w) solid var(--color-text);
+
+  /* side masks so the gradient spans visually full width */
+  box-shadow:
+    var(--page-margin) 0 0 0 var(--color-page-bg),
+    calc(var(--page-margin) * -1) 0 0 0 var(--color-page-bg);
+
+  z-index: 1000;
+  isolation: isolate;               /* ensure ::after sits above page content */
+}
+
+/* upward multi-stop fade drawn by the footer itself (desktop/tablet only) */
+.footer::after{
+  content: "";
+  position: absolute;
+  left: calc(var(--page-margin) * -1);
+  right: calc(var(--page-margin) * -1);
+  top: calc(-1 * var(--footer-border-w) - var(--footer-shadow-h));
+  height: var(--footer-shadow-h);
+  pointer-events: none;
+
+  background-image: linear-gradient(
+    to top,
+      color-mix(in srgb, var(--color-page-bg) 100%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 73.8%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 54.1%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 38.2%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 27.8%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 19.4%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 12.6%, transparent),
+      color-mix(in srgb, var(--color-page-bg) 7.5%,  transparent),
+      color-mix(in srgb, var(--color-page-bg) 4.2%,  transparent),
+      color-mix(in srgb, var(--color-page-bg) 2.1%,  transparent),
+      color-mix(in srgb, var(--color-page-bg) 0.8%,  transparent),
+      color-mix(in srgb, var(--color-page-bg) 0.2%,  transparent),
+      color-mix(in srgb, var(--color-page-bg) 0%,    transparent)
+  );
+}
+
+/* short centered rule exactly on the border */
+.footer-rule{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(calc(-1 * var(--footer-border-w)));
+  width: clamp(320px, 52vw, 960px);  /* change 52vw → 45–60vw to taste */
+  height: 2px;
+  background: color-mix(in oklab, var(--color-text) 80%, transparent);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1001; /* above the gradient */
+}
+
+/* footer links */
+.footer a{
+  text-decoration: none;
+  border-bottom: 1px dashed var(--vp-c-divider);
+}
+.footer a:hover{ border-bottom-color: var(--vp-c-brand-2); }
+
+/* Archive page look */
+.archive {
+  max-width: 48rem;
+}
+.archive__month {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.archive__list {
+  list-style: none;
+  margin: 0 0 1.75rem 0;
+  padding: 0;
+}
+.archive__link {
+  display: inline-block;
+  padding: .2rem 0;
+  text-decoration: none;
+  color: #d32f2f;           /* red like the screenshot; tweak for your theme */
+}
+.archive__link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 640px){
+  .archive { padding-right: .25rem; }
+}
+
+
+/* ===== Mobile: same gradient logic as desktop, footer is fixed ===== */
+@media (max-width: 640px){
+  :root{
+    --footer-shadow-h: 2.5rem;   /* shorter fade on phones */
+    --page-margin: 1rem;         /* smaller side masks (desktop-only anyway) */
+  }
+
+  html { overscroll-behavior-y: contain; }
+
+  /* no spacer when footer is fixed */
+  .footer-spacer { height: 0; }
+
+  /* footer row */
+  .footer{
+    position: fixed;
+    left: 0; right: 0;
+    bottom: env(safe-area-inset-bottom, 0px);
+    max-width: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    box-shadow: none;                 /* mobile doesn't need side masks */
+    border-top: var(--footer-border-w) solid var(--color-text);
+    isolation: isolate;               /* keep pseudo-elements on top of content */
+  }
+
+  /* disable the desktop pseudo (we'll draw the mobile one with ::before) */
+  .footer::after { content: none; }
+
+  /* ✅ EXACTLY the same “upward” multi-stop fade as desktop,
+     anchored to the top of the fixed footer */
+  .footer::before{
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: calc(-1 * var(--footer-border-w) - var(--footer-shadow-h));
+    height: var(--footer-shadow-h);
+    pointer-events: none;
+    z-index: 0; /* underneath the rule text */
+
+    background-image: linear-gradient(
+      to top,
+        color-mix(in srgb, var(--color-page-bg) 100%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 73.8%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 54.1%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 38.2%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 27.8%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 19.4%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 12.6%, transparent),
+        color-mix(in srgb, var(--color-page-bg) 7.5%,  transparent),
+        color-mix(in srgb, var(--color-page-bg) 4.2%,  transparent),
+        color-mix(in srgb, var(--color-page-bg) 2.1%,  transparent),
+        color-mix(in srgb, var(--color-page-bg) 0.8%,  transparent),
+        color-mix(in srgb, var(--color-page-bg) 0.2%,  transparent),
+        color-mix(in srgb, var(--color-page-bg) 0%,    transparent)
+    );
+  }
+
+  /* short centered rule: sits exactly on the border */
+  .footer-rule{
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%) translateY(calc(-1 * var(--footer-border-w)));
+    width: clamp(180px, 68vw, 420px);
+    height: 2px; border-radius: 2px;
+    background: color-mix(in oklab, var(--color-text) 80%, transparent);
+    z-index: 1; /* above the fade */
+  }
+
+  /* keep the left illustration visible but smaller on phones */
+  .footer-illo{
+    display: block;
+    width: clamp(96px, 28vw, 160px);
+    left: -1vw; opacity: .9;
+    z-index: 1002;
+  }
+}
+
+.archive__cover {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 6px;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.post-cover-wrap {
+  margin: 1.5rem 0 1rem;
+  text-align: center;        /* centers inline elements inside the column */
+}
+
+.post-cover {
+  display: inline-block;     /* allows text-align to work */
+  max-width: 100%;           /* don’t overflow column */
+  border-radius: 10px;
+}
+
+@media (min-width: 768px){
+  .post-cover {
+    max-width: 960px;        /* cap large desktop images */
+  }
+}
+@media (max-width: 640px){
+  .post-cover {
+    border-radius: 8px;
+    max-width: 100%;         /* ensure mobile fits viewport */
+  }
+
+}
+
+.post-header {
+  margin: 1.5rem auto 2rem;
+  text-align: left;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.post-date {
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2);
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+.post-cover-wrap {
+  margin: 0 auto 1.5rem;
+}
+
+/* ---- Herebot collapsible box ---- */
+.herebot{
+  border: 2px dotted color-mix(in oklab, var(--vp-c-text-1) 100%, transparent);
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--vp-c-bg) 96%, white 4%);
+  padding: .5rem .75rem;
+  margin: 1.25rem 0;
+}
+
+/* summary row */
+.herebot > summary{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  padding: .25rem 0 .5rem;
+  list-style: none;                     /* hide default marker (Firefox) */
+}
+
+/* Hide default marker in WebKit/Blink */
+.herebot > summary::-webkit-details-marker { display: none; }
+/* And in modern browsers */
+.herebot > summary::marker { content: ""; }
+
+/* OPTIONAL: add our own small arrow via CSS */
+.herebot > summary::before{
+  content: "▸";
+  font-size: .9rem;
+  transform: translateY(1px);
+  opacity: .8;
+}
+.herebot[open] > summary::before{ content: "▾"; }
+
+/* 🚫 Remove the old emoji if you had it from earlier */
+.herebot > summary::after { content: none !important; }
+
+/* inner content spacing */
+.herebot > *:not(summary){ margin: .5rem 0 0; }
+.herebot[open]{ padding-bottom: .75rem; }
+
+.centered .content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Kill the mobile menu (keep the top bar/title) */
+@media (max-width: 960px){
+  /* Hide the hamburger button */
+  .VPNavBarHamburger { display: none !important; }
+
+  /* Ensure the slide-out overlay can never appear */
+  .VPNavScreen { display: none !important; }
+}
+
+/* Contact form styles */
+.contact-section {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--vp-c-bg) 95%, white 5%);
+}
+
+.contact-section label {
+  display: block;
+  margin-bottom: .25rem;
+  font-weight: 600;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  background: var(--vp-c-bg-alt, #fff);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-section .actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: .75rem;
+}
+
+.contact-section .actions input[type="submit"] {
+  background: var(--vp-c-brand-1);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: .5rem 1.25rem;
+  transition: background .2s;
+}
+
+.contact-section .actions input[type="submit"]:hover {
+  background: var(--vp-c-brand-2);
+}
+
+/* Make the top-left title match the reference */
+.VPNavBarTitle > a.title{
+  font-family: "Playfair Display", serif;
+  font-weight: 800;                /* try 900 if you want it bolder */
+  font-size: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  line-height: 1;
+  letter-spacing: 0;               /* tighten if needed: -0.2px */
+  color: #222;                     /* same as reference */
+  text-decoration: none;
+  /* optional “boxed” look like the reference */
+  /*background-color: var(--vp-c-bg); */
+  border-radius: 0.3vmin;
+}
+
+/* hover keeps the box and removes underline */
+@media (hover:hover){
+  .VPNavBarTitle > a.title:hover{
+    text-decoration: none;
+  }
+}
+
+/* --- Paper card code blocks with hard offset shadow --- */
+:root {
+  --code-bg: var(--vp-c-bg);                  /* same as page bg */
+  --code-border: color-mix(in oklab, #000 78%, var(--vp-c-bg));
+  --code-shadow: color-mix(in oklab, #000 88%, transparent);
+}
+
+/* outer fence */
+.vp-doc div[class*='language-']{
+  background: var(--code-bg) !important;
+  border: 2px solid var(--code-border);
+  border-radius: 0;                            /* square corners */
+  box-shadow: 8px 8px 0 var(--code-shadow);    /* hard offset shadow */
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+/* remove any inner bg; set padding */
+.vp-doc div[class*='language-'] pre{
+  background: transparent !important;
+  margin: 0;
+  padding: 14px 16px;
+}
+
+/* keep code clean */
+.vp-doc div[class*='language-'] code{
+  background: transparent !important;
+  font-size: .94rem;
+  line-height: 1.55;
+}
+
+/* optional: lighter treatment for dark mode so it doesn't get muddy */
+html.dark {
+  --code-border: color-mix(in oklab, #fff 30%, var(--vp-c-bg));
+  --code-shadow: color-mix(in oklab, #000 65%, transparent);
+}
+
+/* Match form container to code block style */
+.contact-section {
+  background: var(--vp-c-bg);
+  border: 2px solid var(--code-border, #000);
+  border-radius: 0; /* square corners like your screenshot */
+  box-shadow: 8px 8px 0 var(--code-shadow, #000);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Labels */
+.contact-section label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+/* Inputs & textarea */
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--code-border, #000);
+  border-radius: 0;
+  background: var(--vp-c-bg);
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  box-shadow: none;
+}
+
+.contact-section textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.contact-section input[type="submit"],
+.contact-section input[type="reset"] {
+  border: 2px solid var(--code-border, #000);
+  background: var(--vp-c-bg);
+  box-shadow: 4px 4px 0 var(--code-shadow, #000);
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-section input[type="submit"]:hover,
+.contact-section input[type="reset"]:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 var(--code-shadow, #000);
+}
+
+.vp-doc blockquote {
+  background: var(--vp-c-bg);
+  border: 2px solid var(--code-border, #000);
+  border-radius: 0;
+  box-shadow: 8px 8px 0 var(--code-shadow, #000);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}

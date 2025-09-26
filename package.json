@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "vitepress": "^2.0.0-alpha.12"
+  },
+  "dependencies": {
+    "@catppuccin/vitepress": "^0.1.2",
+    "markdown-it-container": "^4.0.0"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
