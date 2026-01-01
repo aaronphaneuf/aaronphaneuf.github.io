@@ -19,7 +19,7 @@ Use me to find your way in my website.
 
 
 
-> Drifts in the purgatory of unresolved merge conflicts: not committed, not discarded — haunting every push. 👻
+> Drifts in the snowy purgatory of unresolved merge conflicts - not committed, not discarded - haunting every push like a git-wrapped ghost of Christmas past. 👻🎁
 <br>
 
 <br>

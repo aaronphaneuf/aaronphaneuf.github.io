@@ -4,8 +4,6 @@ cover: /images/profile.png
 showCover: true
 ---
 
-# About Me
-
 Hello! I’m Aaron Phaneuf - a husband and father of one. I have a history of establishing valuable processes and maintaining high standards of data integrity as well as a strong focus on building a solid foundation of reusable data tools and limiting the accumulation of data tech debt.
 
 At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue forecasting and campaign performance to streamlining data systems and internal processes. I'm passionate about problem-solving - whether it's through SQL queries, dashboard design, or optimizing visitor experiences. Outside of work, I enjoy coding projects, home server tinkering, mathematics, chess, and a good book.

@@ -2,7 +2,7 @@
 title: Upgrading MySQL 5 - 8
 date: 2025-09-09
 draft: false
-cover: /images/wizard2.png
+cover: /images/wizard3.png
 aside: false
 tags: [homelab, blog, mysql, ghost]
 ---
