@@ -17,9 +17,15 @@ Use me to find your way in my website.
 `/` (root)
 :::
 
+<!--
+::: birdbot "You spotted a Snowy Owl!"
+There was a **1 in 50** chance of this occurring.
 
+<a class="birdbot-save" href="#">Save this spot here</a>
+:::
+-->
 
-> Drifts in the snowy purgatory of unresolved merge conflicts - not committed, not discarded - haunting every push like a git-wrapped ghost of Christmas past. 👻🎁
+> Stuck in a git garden where nothing merges, everything grows wild, and every pull request feels like allergy season. 🌿
 <br>
 
 <br>

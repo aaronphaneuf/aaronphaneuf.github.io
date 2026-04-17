@@ -4,7 +4,7 @@ cover: /images/profile.png
 showCover: true
 ---
 
-Hello! I’m Aaron Phaneuf - a husband and father of one. I have a history of establishing valuable processes and maintaining high standards of data integrity as well as a strong focus on building a solid foundation of reusable data tools and limiting the accumulation of data tech debt.
+Hello! I’m Aaron Phaneuf - a husband and father of ~~one~~ two. I have a history of establishing valuable processes and maintaining high standards of data integrity as well as a strong focus on building a solid foundation of reusable data tools and limiting the accumulation of data tech debt.
 
 At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue forecasting and campaign performance to streamlining data systems and internal processes. I'm passionate about problem-solving - whether it's through SQL queries, dashboard design, or optimizing visitor experiences. Outside of work, I enjoy coding projects, home server tinkering, mathematics, chess, and a good book.
 
@@ -12,14 +12,26 @@ At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue fo
 
 ### Business Analyst - Information Systems
 
-<small>The Calgary Zoo & Wilder Institute (August 2020 – Present)</small>
+<small>The Calgary Zoo & Wilder Institute (Jnue 2025 – Present)</small>
+
+> As a Business Analyst - Information Systems, I partner with stakeholders to design and deliver technology-driven solutions, translating business needs into scalable systems, data workflows, and processes that improve operations and support organizational goals.
 
 ##### Key Responsibilities
-* Gathered and documented business requirements using methods such as discovery sessions, process modeling, user stories, and prototyping to ensure clarity and alignment across stakeholders
-* Defined business solutions through detailed design documents, functional and non-functional requirements, and Agile artifacts (wireframes, journey maps), bridging business needs with technical delivery.
-* Developed process and business models, and cost analyses that informed decision-making and optimized workflows across departments.
-* Created and executed QA and UAT plans, as well as report specifications, ensuring solution quality and business value.}
-* Applied analytical thinking, project management, and business acumen to balance risks, costs, and benefits, while collaborating with stakeholders to advance customer-focused, conservation-driven outcomes.
+* Gathered and documented business requirements using discovery sessions, process modeling, user stories, and prototyping to ensure alignment across stakeholders and technical teams.
+* Defined business and technical solutions through detailed design documents, functional/non-functional requirements, and Agile artifacts (wireframes, journey maps), bridging business needs with system implementation.
+* Developed process models, reporting frameworks, and cost analyses that informed decision-making and improved operational efficiency across multiple departments.
+* Created and executed QA and UAT plans, along with report specifications, ensuring solution accuracy, data integrity, and business value.
+* Applied analytical thinking and project management principles to balance risk, cost, and impact while advancing customer-focused, conservation-driven initiatives.
+
+##### Key Achievements & Systems Implementations
+* Led implementation of Hosted Pay and 3D Secure payment solutions, improving transaction security and ensuring PCI compliance while reducing payment risk.
+* Delivered Post Pay functionality, enabling deferred payment workflows and expanding purchasing flexibility for internal and external users.
+* Launched mid-tier membership offerings, bridging donor and ticketing systems to create new revenue streams and improve customer segmentation.
+* Implemented an abandoned cart campaign, increasing conversion opportunities and recovering otherwise lost revenue.
+* Administered and optimized SharePoint environments, including site architecture, permissions, and content lifecycle management, resulting in measurable storage and efficiency improvements.
+* Established a centralized knowledge base/wiki, improving internal documentation, onboarding, and cross-team knowledge sharing.
+* Developed and maintained SSRS reports and data pipelines (SSIS) to support financial reconciliation, operational reporting, and decision-making.
+* Supported integration and data workflows across systems including Tessitura, Toast, and financial platforms, improving data consistency and reporting accuracy.
 
 ### Marketing Analytics Specialist
 <small>The Calgary Zoo & Wilder Institute (August 2020 – May 2025) </small>
@@ -34,7 +46,7 @@ At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue fo
 * Collaborate with IT and technical teams to define and automate tasks and reporting.
 * Engage with multiple stakeholder groups to foster a collaborative work environment.
 
-##### Successes
+##### Key Achievements & Systems Implementations
 
 * Advanced from Analyst 1 through Analyst 3, and subsequently to Buisness Systems & Intelligence Analyst, reflecting increased growth in responsibility, technical expertise, and strategic insight.
 * Developed comprehensive dashboards for Marketing, IT, Education, and Concession teams.
@@ -61,7 +73,8 @@ At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue fo
 
 > Led a team responsible for data entry of new listings, price updates, auditing, and database filing. Applied data analysis and manipulation skills to create a variety of custom reports combining multiple data sources.
 
-##### Successes
+##### Key Achievements & Systems Implementations
+
 <ul>
   <li>Automated complex reports and database extracts, reducing manual workload.</li>
   <li>Streamlined monthly promotion automation across 11 locations.</li>
@@ -73,7 +86,8 @@ At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue fo
 
 > Handled data entry of new product listings, price updates, and database filing.
 
-##### Successes
+##### Key Achievements & Systems Implementations
+
 <ul>
   <li>Streamlined interoperability between point-of-sale systems.</li>
   <li>Troubleshot and resolved point-of-sale system issues.</li>
@@ -88,6 +102,13 @@ At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue fo
 * Javascript
 * Django
 * Vue
+
+### Data Engineering / ETL & Reporting
+* SSIS (SQL Server Integration Services)
+* SSRS (SQL Server Reporting Services)
+* ETL Development & Maintenance
+* Data Pipelines
+* Report Development
 
 ### Data & Analytics
 * Excel
@@ -104,6 +125,7 @@ At the Wilder Institute/Calgary Zoo, I’ve worked on everything from revenue fo
 
 ### Enterprise Systems
 * Tessitura
+* Toast
 * Financial Edge
 * Questica
 * PowerPlan
@@ -152,6 +174,6 @@ Coming soon!
 
 B.S. In Applied Mathematics
 
-## Links
+## Links & Projects
 
-Coming soon!
+[Github](https://github.com/aaronphaneuf)

@@ -333,6 +333,50 @@ html, body { background: var(--vp-c-bg); }
   .VPNavScreen { display: none !important; }
 }
 
+/* ---- Birdbot collapsible box (matches Herebot exactly) ---- */
+.birdbot{
+  border-left: 10px solid var(--vp-c-brand-1);
+  border-top: 1px dashed color-mix(in oklab, var(--vp-c-text-1) 60%, transparent);
+  border-right: 1px dashed color-mix(in oklab, var(--vp-c-text-1) 60%, transparent);
+  border-bottom: 1px dashed color-mix(in oklab, var(--vp-c-text-1) 60%, transparent);
+
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--vp-c-bg) 96%, white 4%);
+  padding: .5rem .75rem;
+  margin: 1.25rem 0;
+}
+/* summary row */
+.birdbot > summary{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  padding: .25rem 0 .5rem;
+  list-style: none;
+}
+
+/* Hide default marker */
+.birdbot > summary::-webkit-details-marker { display: none; }
+.birdbot > summary::marker { content: ""; }
+
+/* same custom arrow */
+.birdbot > summary::before{
+  content: "▸";
+  font-size: .9rem;
+  transform: translateY(1px);
+  opacity: .8;
+}
+.birdbot[open] > summary::before{ content: "▾"; }
+
+/* ensure no emoji marker sneaks in */
+.birdbot > summary::after { content: none !important; }
+
+/* inner content spacing */
+.birdbot > *:not(summary){ margin: .5rem 0 0; }
+.birdbot[open]{ padding-bottom: .75rem; }
+
 /* Contact form styles */
 .contact-section {
   max-width: 640px;
