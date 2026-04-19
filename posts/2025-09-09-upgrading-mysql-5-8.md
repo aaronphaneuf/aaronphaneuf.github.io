@@ -68,7 +68,7 @@ image: ghost:4.44
 image: mysql:5.7
 ```
 
-too good to be true, and I can confirm that it’s not the solution.
+seemed too good to be true, and I can confirm that it’s not the solution.
 
 What did work? After some trial and error, I found success by creating a backup of my existing database:
 
