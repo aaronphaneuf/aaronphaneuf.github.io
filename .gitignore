@@ -2,3 +2,7 @@ node_modules
 .vitepress/cache
 .vitepress/dist
 
+.env
+
+posthog-setup-report.md
+
